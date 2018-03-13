@@ -89,11 +89,11 @@ public class Principal extends javax.swing.JFrame {
         tf_Rpassword = new javax.swing.JPasswordField();
         tf_Ruser = new javax.swing.JTextField();
         tf_Rname = new javax.swing.JTextField();
-        jTextField1 = new javax.swing.JTextField();
+        tf_Remail = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        rb_MR = new javax.swing.JRadioButton();
+        rb_FR = new javax.swing.JRadioButton();
         jLabel18 = new javax.swing.JLabel();
         cb_tipoUser = new javax.swing.JComboBox<>();
         jLabel19 = new javax.swing.JLabel();
@@ -690,11 +690,12 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel17.setText("Género:");
 
-        bg_registro.add(jRadioButton1);
-        jRadioButton1.setText("M");
+        bg_registro.add(rb_MR);
+        rb_MR.setSelected(true);
+        rb_MR.setText("M");
 
-        bg_registro.add(jRadioButton2);
-        jRadioButton2.setText("F");
+        bg_registro.add(rb_FR);
+        rb_FR.setText("F");
 
         jLabel18.setText("Tipo de Usuario:");
 
@@ -731,9 +732,9 @@ public class Principal extends javax.swing.JFrame {
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel17)
                                 .addGap(18, 18, 18)
-                                .addComponent(jRadioButton1)
+                                .addComponent(rb_MR)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jRadioButton2))
+                                .addComponent(rb_FR))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addGap(18, 18, 18)
@@ -741,7 +742,7 @@ public class Principal extends javax.swing.JFrame {
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel16)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1))))
+                                .addComponent(tf_Remail))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(116, 116, 116)
                         .addComponent(jLabel19)))
@@ -770,13 +771,13 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_Remail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(rb_MR)
+                    .addComponent(rb_FR))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
@@ -787,6 +788,11 @@ public class Principal extends javax.swing.JFrame {
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_register_xl_64x64.png.png"))); // NOI18N
 
         jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_register_ok_64x64.png"))); // NOI18N
+        jLabel21.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel21MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -1179,6 +1185,37 @@ public class Principal extends javax.swing.JFrame {
         jd_publicaciones.setVisible(true);
     }//GEN-LAST:event_jmi_publicacionesActionPerformed
 
+    private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
+        //Registrar nuevo usuario
+        registrar();
+        
+    }//GEN-LAST:event_jLabel21MouseClicked
+
+    public void registrar(){
+        //Lista l = new Lista();
+        String nombre = tf_Rname.getText();
+        String user = tf_Ruser.getText();
+        String pwd= tf_Rpassword.getText();
+        String fecha = jDateChooser1.getDateFormatString();
+        String email = tf_Remail.getText();
+        String sexo;
+        
+        if(rb_MR.isSelected()){
+            sexo="M";
+        }else{
+            sexo="F";
+        }
+        
+        try{
+            Usuario x = new Usuario("Dirección",user,pwd,nombre,sexo,fecha);
+            usuarios.insertarFinal(x);
+            JOptionPane.showMessageDialog(null, x.toString());
+            usuarios.mostrar();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -1281,8 +1318,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -1290,7 +1325,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JDialog jd_actas;
     private javax.swing.JDialog jd_candidatos;
     private javax.swing.JDialog jd_inbox;
@@ -1319,16 +1353,20 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmi_signup;
     private javax.swing.JPanel jp_main;
     private javax.swing.JPanel jp_welcome;
+    private javax.swing.JRadioButton rb_FR;
+    private javax.swing.JRadioButton rb_MR;
     private javax.swing.JRadioButton rb_f;
     private javax.swing.JRadioButton rb_m;
     private javax.swing.JTextField tf_Pemail;
     private javax.swing.JTextField tf_Pname;
     private javax.swing.JPasswordField tf_Ppassword;
     private javax.swing.JTextField tf_Puser;
+    private javax.swing.JTextField tf_Remail;
     private javax.swing.JTextField tf_Rname;
     private javax.swing.JPasswordField tf_Rpassword;
     private javax.swing.JTextField tf_Ruser;
     private javax.swing.JPasswordField tf_password;
     private javax.swing.JTextField tf_usuario;
     // End of variables declaration//GEN-END:variables
+    Lista usuarios = new Lista();
 }

@@ -16,7 +16,7 @@ public class Usuario extends Persona{
         super();
     }
 
-    public Usuario(String direccion, String usuario, String password, String nombre, String sexo, Date fechan) {
+    public Usuario(String direccion, String usuario, String password, String nombre, String sexo, String fechan) {
         super(usuario, password, nombre, sexo, fechan);
         this.direccion = direccion;
     }

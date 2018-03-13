@@ -8,13 +8,13 @@ import java.util.Date;
 public class Persona {
     
     protected String usuario, password, nombre, sexo;
-    protected Date fechan;
+    protected String fechan;
     
     public Persona(){
         
     }
 
-    public Persona(String usuario, String password, String nombre, String sexo, Date fechan) {
+    public Persona(String usuario, String password, String nombre, String sexo, String fechan) {
         this.usuario = usuario;
         this.password = password;
         this.nombre = nombre;
@@ -54,11 +54,11 @@ public class Persona {
         this.sexo = sexo;
     }
 
-    public Date getFechan() {
+    public String getFechan() {
         return fechan;
     }
 
-    public void setFechan(Date fechan) {
+    public void setFechan(String fechan) {
         this.fechan = fechan;
     }
 

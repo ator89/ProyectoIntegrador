@@ -16,7 +16,7 @@ public class Candidato extends Persona{
         super();
     }
 
-    public Candidato(String usuario, String password, String nombre, String sexo, Date fechan) {
+    public Candidato(String usuario, String password, String nombre, String sexo, String fechan) {
         super(usuario, password, nombre, sexo, fechan);
     }
 
