@@ -7,19 +7,19 @@ import java.util.Date;
 
 public class Persona {
     
-    protected String usuario, password, nombre, sexo;
-    protected String fechan;
+    protected String usuario, password, nombre, email, sexo, fecha;
     
     public Persona(){
         
     }
 
-    public Persona(String usuario, String password, String nombre, String sexo, String fechan) {
+    public Persona(String usuario, String password, String nombre, String email, String sexo, String fecha) {
         this.usuario = usuario;
         this.password = password;
         this.nombre = nombre;
+        this.email = email;
         this.sexo = sexo;
-        this.fechan = fechan;
+        this.fecha = fecha;
     }
 
     public String getUsuario() {
@@ -46,6 +46,14 @@ public class Persona {
         this.nombre = nombre;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getSexo() {
         return sexo;
     }
@@ -54,18 +62,20 @@ public class Persona {
         this.sexo = sexo;
     }
 
-    public String getFechan() {
-        return fechan;
+    public String getFecha() {
+        return fecha;
     }
 
-    public void setFechan(String fechan) {
-        this.fechan = fechan;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 
     @Override
     public String toString() {
-        return "Persona{" + "usuario=" + usuario + ", password=" + password + ", nombre=" + nombre + ", sexo=" + sexo + ", fechan=" + fechan + '}';
+        return "usuario=" + usuario + '}';
     }
+
+    
     
     
 

@@ -16,10 +16,12 @@ public class Usuario extends Persona{
         super();
     }
 
-    public Usuario(String direccion, String usuario, String password, String nombre, String sexo, String fechan) {
-        super(usuario, password, nombre, sexo, fechan);
+    public Usuario(String direccion, String usuario, String password, String nombre, String email, String sexo, String fecha) {
+        super(usuario, password, nombre, email, sexo, fecha);
         this.direccion = direccion;
     }
+
+    
 
     public String getDireccion() {
         return direccion;
@@ -43,6 +45,10 @@ public class Usuario extends Persona{
 
     public void setCandidatos(ArrayList<Candidato> candidatos) {
         this.candidatos = candidatos;
+    }
+    
+    public void setUsuarioC(Candidato c){
+        this.candidatos.add(c);
     }
 
     @Override

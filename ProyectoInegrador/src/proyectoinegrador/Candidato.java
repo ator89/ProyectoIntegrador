@@ -16,9 +16,11 @@ public class Candidato extends Persona{
         super();
     }
 
-    public Candidato(String usuario, String password, String nombre, String sexo, String fechan) {
-        super(usuario, password, nombre, sexo, fechan);
+    public Candidato(String usuario, String password, String nombre, String email, String sexo, String fecha) {
+        super(usuario, password, nombre, email, sexo, fecha);
     }
+
+    
 
     public ArrayList<String> getCertificaciones() {
         return certificaciones;
