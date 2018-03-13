@@ -1207,7 +1207,7 @@ public class Principal extends javax.swing.JFrame {
         }
         
         try{
-            Usuario x = new Usuario("Dirección",user,pwd,nombre,sexo,fecha);
+            Usuario x = new Usuario("Dirección",user,pwd,nombre,email,sexo,fecha);
             usuarios.insertarFinal(x);
             JOptionPane.showMessageDialog(null, x.toString());
             usuarios.mostrar();
