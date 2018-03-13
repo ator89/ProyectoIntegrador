@@ -48,7 +48,5 @@ public class Candidato extends Persona{
     public String toString() {
         return "Candidato{" + "certificaciones=" + certificaciones + ", publicaciones=" + publicaciones + ", seguidores=" + seguidores + '}';
     }
-    
-    
 
 }

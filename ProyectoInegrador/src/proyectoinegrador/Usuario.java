@@ -12,7 +12,7 @@ public class Usuario extends Persona{
     private ArrayList<String> correos = new ArrayList();
     private ArrayList<Candidato> candidatos = new ArrayList();
 
-    public Usuario() {
+    public Usuario(){
         super();
     }
 
