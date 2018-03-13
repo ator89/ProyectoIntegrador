@@ -49,7 +49,23 @@ public class Principal extends javax.swing.JFrame {
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jd_candidatos = new javax.swing.JDialog();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList<>();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jList4 = new javax.swing.JList<>();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
         jd_publicaciones = new javax.swing.JDialog();
+        jPanel13 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel6 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jd_inbox = new javax.swing.JDialog();
         jPanel3 = new javax.swing.JPanel();
         jd_actas = new javax.swing.JDialog();
@@ -89,13 +105,16 @@ public class Principal extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jl_perfil = new javax.swing.JLabel();
         jl_usuarios = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jl_candidatos = new javax.swing.JLabel();
+        jl_publicaciones = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jp_welcome = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -382,30 +401,156 @@ public class Principal extends javax.swing.JFrame {
         jd_usuarios.getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 420));
 
         jd_candidatos.setTitle("Candidatos");
+        jd_candidatos.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jd_candidatosLayout = new javax.swing.GroupLayout(jd_candidatos.getContentPane());
-        jd_candidatos.getContentPane().setLayout(jd_candidatosLayout);
-        jd_candidatosLayout.setHorizontalGroup(
-            jd_candidatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jPanel11.setBackground(new java.awt.Color(51, 153, 255));
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+
+        jList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList3);
+
+        jList4.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jList4);
+
+        jLabel3.setText("Candidatos");
+
+        jLabel36.setText("Siguiendo");
+
+        jLabel37.setText("Follow");
+
+        jLabel38.setText("Unfollow");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(48, 48, 48)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(138, 138, 138)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(75, Short.MAX_VALUE))
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGap(74, 74, 74)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel36)
+                .addGap(125, 125, 125))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(jLabel38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel37)
+                .addGap(128, 128, 128))
         );
-        jd_candidatosLayout.setVerticalGroup(
-            jd_candidatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jLabel3))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel36)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel38))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
+
+        jPanel11.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 540, 320));
+
+        jd_candidatos.getContentPane().add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 390));
 
         jd_publicaciones.setTitle("Publicaciones");
+        jd_publicaciones.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jd_publicacionesLayout = new javax.swing.GroupLayout(jd_publicaciones.getContentPane());
-        jd_publicaciones.getContentPane().setLayout(jd_publicacionesLayout);
-        jd_publicacionesLayout.setHorizontalGroup(
-            jd_publicacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        jPanel13.setBackground(new java.awt.Color(0, 153, 255));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Título", "Fecha", "Autor", "Categoría"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, true, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane5.setViewportView(jTable1);
+
+        jLabel6.setText("Publicaciones por los Candidatos Presidenciales");
+
+        jButton1.setText("Abrir");
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 433, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(jLabel6)))
+                .addContainerGap(66, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(94, 94, 94))
         );
-        jd_publicacionesLayout.setVerticalGroup(
-            jd_publicacionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel14Layout.createSequentialGroup()
+                .addGap(26, 26, 26)
+                .addComponent(jLabel6)
+                .addGap(26, 26, 26)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
+
+        jPanel13.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 560, 290));
+
+        jd_publicaciones.getContentPane().add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 370));
 
         jd_inbox.setTitle("Inbox");
 
@@ -689,108 +834,72 @@ public class Principal extends javax.swing.JFrame {
         jp_main.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jl_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_perfil_128x128.png"))); // NOI18N
+        jl_perfil.setToolTipText("Visitar Mi Perfil");
         jl_perfil.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jl_perfilMouseClicked(evt);
             }
         });
+        jPanel5.add(jl_perfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
 
         jl_usuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_friends_128x128.png"))); // NOI18N
+        jl_usuarios.setToolTipText("Usuarios");
         jl_usuarios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jl_usuariosMouseClicked(evt);
             }
         });
+        jPanel5.add(jl_usuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_candidatos_128x128.png"))); // NOI18N
+        jl_candidatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_candidatos_128x128.png"))); // NOI18N
+        jl_candidatos.setToolTipText("Candidatos Presidenciales");
+        jl_candidatos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_candidatosMouseClicked(evt);
+            }
+        });
+        jPanel5.add(jl_candidatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
-        jLabel7.setText("Publicaciones");
+        jl_publicaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_pubs_128x128.png"))); // NOI18N
+        jl_publicaciones.setToolTipText("Publicaciones");
+        jl_publicaciones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jl_publicacionesMouseClicked(evt);
+            }
+        });
+        jPanel5.add(jl_publicaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 250, -1, -1));
 
-        jLabel8.setText("Inbox");
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_inbox_128x128.png"))); // NOI18N
+        jLabel8.setToolTipText("Inbox");
+        jPanel5.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, -1, -1));
 
         jLabel9.setText("Actas");
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 230, -1, -1));
 
         jLabel22.setText("Usuarios");
+        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, -1, -1));
 
         jLabel23.setText("Candidatos");
+        jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, -1));
 
         jLabel5.setText("Mi Perfil");
+        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, -1));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(107, 107, 107)
-                        .addComponent(jLabel5))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jl_perfil)))
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(jLabel22)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jl_usuarios)))
-                .addGap(95, 95, 95))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(111, 111, 111)
-                        .addComponent(jLabel9))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(96, 96, 96)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel23)
-                        .addGap(121, 121, 121))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(86, 86, 86))))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5)))
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jl_usuarios)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel23)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel6)
-                        .addGap(61, 61, 61)
-                        .addComponent(jLabel9))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(jl_perfil)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel7)
-                        .addGap(71, 71, 71)
-                        .addComponent(jLabel8)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel39.setText("Publicaciones");
+        jPanel5.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, -1, -1));
 
-        jp_main.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 570, 370));
+        jLabel40.setText("Inbox");
+        jPanel5.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, -1, -1));
 
-        getContentPane().add(jp_main, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 420));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_actas_128x128.png"))); // NOI18N
+        jPanel5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, -1, -1));
+
+        jp_main.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 680, 400));
+
+        getContentPane().add(jp_main, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 450));
 
         jp_welcome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -813,9 +922,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(16, 16, 16))
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel6Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 185, Short.MAX_VALUE)
                     .addComponent(jLabel4)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 186, Short.MAX_VALUE)))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -825,9 +934,9 @@ public class Principal extends javax.swing.JFrame {
                 .addGap(17, 17, 17))
             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel6Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 147, Short.MAX_VALUE)
                     .addComponent(jLabel4)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 147, Short.MAX_VALUE)))
         );
 
         jp_welcome.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 510, 310));
@@ -869,19 +978,43 @@ public class Principal extends javax.swing.JFrame {
 
         jMenu2.setText("Ver");
 
-        jmi_perfil.setText("Perfil");
+        jmi_perfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_perfil_24x24.png"))); // NOI18N
+        jmi_perfil.setText("Mi Perfil");
+        jmi_perfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_perfilActionPerformed(evt);
+            }
+        });
         jMenu2.add(jmi_perfil);
 
         jmi_amigos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_friends_24x24.png"))); // NOI18N
-        jmi_amigos.setText("Usuarios");
+        jmi_amigos.setText("Usuarios del Sistema");
+        jmi_amigos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_amigosActionPerformed(evt);
+            }
+        });
         jMenu2.add(jmi_amigos);
 
-        jmi_candidatos.setText("Lista de Candidatos");
+        jmi_candidatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_candidatos_24x24.png"))); // NOI18N
+        jmi_candidatos.setText("Candidatos Presidenciales");
+        jmi_candidatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_candidatosActionPerformed(evt);
+            }
+        });
         jMenu2.add(jmi_candidatos);
 
+        jmi_publicaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_pubs_24x24.png"))); // NOI18N
         jmi_publicaciones.setText("Publicaciones");
+        jmi_publicaciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_publicacionesActionPerformed(evt);
+            }
+        });
         jMenu2.add(jmi_publicaciones);
 
+        jmi_inbox.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_inbox_24x24.png"))); // NOI18N
         jmi_inbox.setText("Inbox");
         jMenu2.add(jmi_inbox);
 
@@ -897,7 +1030,7 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmi_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_loginActionPerformed
-        
+        //login jmenu
         jd_login.setModal(true);
         jd_login.pack();
         jd_login.setLocationRelativeTo(this);
@@ -956,7 +1089,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jl_usuariosMouseClicked
 
     private void jl_editPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_editPMouseClicked
-        
+        //modificar información de perfil
         tf_Pname.setEnabled(true);
         tf_Puser.setEnabled(true);
         tf_Ppassword.setEnabled(true);
@@ -973,7 +1106,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jl_editPMouseClicked
 
     private void jl_xlPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_xlPMouseClicked
-        
+        //cancelar editar usuario
         tf_Pname.setEnabled(false);
         tf_Puser.setEnabled(false);
         tf_Ppassword.setEnabled(false);
@@ -989,13 +1122,62 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jl_xlPMouseClicked
 
     private void jl_perfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_perfilMouseClicked
-        
+        //abrir perfil desde icon menú
         jd_perfil.setModal(true);
         jd_perfil.pack();
         jd_perfil.setLocationRelativeTo(this);
         jd_perfil.setVisible(true);
         
     }//GEN-LAST:event_jl_perfilMouseClicked
+
+    private void jl_candidatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_candidatosMouseClicked
+        //abrir candidatos desde icon menú
+        jd_candidatos.setModal(true);
+        jd_candidatos.pack();
+        jd_candidatos.setLocationRelativeTo(this);
+        jd_candidatos.setVisible(true);
+    }//GEN-LAST:event_jl_candidatosMouseClicked
+
+    private void jmi_perfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_perfilActionPerformed
+        //abriri perfil desde jmenu
+        jd_perfil.setModal(true);
+        jd_perfil.pack();
+        jd_perfil.setLocationRelativeTo(this);
+        jd_perfil.setVisible(true);        
+        
+    }//GEN-LAST:event_jmi_perfilActionPerformed
+
+    private void jmi_amigosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_amigosActionPerformed
+        //ver usuarios jmenu
+        jd_usuarios.setModal(true);
+        jd_usuarios.pack();
+        jd_usuarios.setLocationRelativeTo(this);
+        jd_usuarios.setVisible(true);
+    }//GEN-LAST:event_jmi_amigosActionPerformed
+
+    private void jmi_candidatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_candidatosActionPerformed
+        //abrir candidatos jmenu
+        jd_candidatos.setModal(true);
+        jd_candidatos.pack();
+        jd_candidatos.setLocationRelativeTo(this);
+        jd_candidatos.setVisible(true);
+    }//GEN-LAST:event_jmi_candidatosActionPerformed
+
+    private void jl_publicacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_publicacionesMouseClicked
+        //ver publicaciones
+        jd_publicaciones.setModal(true);
+        jd_publicaciones.pack();
+        jd_publicaciones.setLocationRelativeTo(this);
+        jd_publicaciones.setVisible(true);
+    }//GEN-LAST:event_jl_publicacionesMouseClicked
+
+    private void jmi_publicacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_publicacionesActionPerformed
+        //ver publicaciones jmenu
+        jd_publicaciones.setModal(true);
+        jd_publicaciones.pack();
+        jd_publicaciones.setLocationRelativeTo(this);
+        jd_publicaciones.setVisible(true);
+    }//GEN-LAST:event_jmi_publicacionesActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -1036,6 +1218,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton bt_login;
     private javax.swing.JComboBox<String> cb_tipoUP;
     private javax.swing.JComboBox<String> cb_tipoUser;
+    private javax.swing.JButton jButton1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1059,13 +1242,19 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1073,11 +1262,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
+    private javax.swing.JList<String> jList3;
+    private javax.swing.JList<String> jList4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1090,7 +1285,11 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JDialog jd_actas;
     private javax.swing.JDialog jd_candidatos;
@@ -1101,8 +1300,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog jd_registro;
     private javax.swing.JDialog jd_usuarios;
     private com.toedter.calendar.JDateChooser jdc_Pfecha;
+    private javax.swing.JLabel jl_candidatos;
     private javax.swing.JLabel jl_editP;
     private javax.swing.JLabel jl_perfil;
+    private javax.swing.JLabel jl_publicaciones;
     private javax.swing.JLabel jl_saveP;
     private javax.swing.JLabel jl_usuarios;
     private javax.swing.JLabel jl_xlP;
