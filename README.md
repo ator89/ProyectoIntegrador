@@ -1,2 +1,2 @@
 # ProyectoIntegrador
-Proyecto Integrado - Lab. Programación 2
+Proyecto Integrador
